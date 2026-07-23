@@ -1,13 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package library;
 
-/**
- *
- * @author wuood
- */
 public class Main {
-    
+   public static void main(String[] args){
+       
+      Library library= new  Library();
+       
+       Book book1= new Book(1,"Clean code","Robert C.Martin");
+       Book book2= new Book(2,"Java Basics","John Smith");
+       Book book3= new Book(3,"Design Pattern","GoF");
+      library.addBook(book1);
+      library.addBook(book2);
+      library.addBook(book3);
+      library.displayBooks();
+
+
+                     
+
+
+       
+       
+   
+   } 
 }
