@@ -43,4 +43,13 @@ public class Library {
      }
      return null;
  } 
+ public boolean removeBook(int id){
+     Book book = SearchBookById(id);
+     
+     if(book!= null){
+         books.remove(book);
+         return true;
+     }
+    return false; 
+ }
 }

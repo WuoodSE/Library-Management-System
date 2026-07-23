@@ -28,9 +28,19 @@ if(findBook!= null){
 System.out.println("Book not found ");
 }
                      
+System.out.println("Before removing");
+library.displayBooks();
 
+boolean removed = library.removeBook(2);
 
-       
+if(removed){
+    System.out.println("Book removed successfully");
+}else{
+    System.out.println("Book not found");
+}
+  System.out.println("After removing");
+     library.displayBooks();
+
        
    
    } 
