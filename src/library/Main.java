@@ -14,7 +14,19 @@ public class Main {
       library.addBook(book3);
       library.displayBooks();
 
-
+Book foundBook= library.SearchBookById(2);
+if(foundBook!= null){
+    System.out.println(foundBook);
+}else{
+System.out.println("Book not found ");
+}
+  
+Book findBook= library.SearchBookByTitle("java");
+if(findBook!= null){
+    System.out.println(findBook);
+}else{
+System.out.println("Book not found ");
+}
                      
 
 

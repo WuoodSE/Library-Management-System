@@ -27,6 +27,20 @@ public class Library {
 
        }  
    }
-   
-   
+ public Book SearchBookById(int id){
+     for(Book book: books){
+     if(book.getId()==id){
+         return book;
+     }
+     }
+     return null;
+ } 
+ public Book SearchBookByTitle(String title){
+     for(Book book: books){
+     if(book.getTitle().equalsIgnoreCase(title)){
+         return book;
+     }
+     }
+     return null;
+ } 
 }
