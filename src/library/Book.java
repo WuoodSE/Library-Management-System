@@ -36,6 +36,20 @@ public class Book {
           this.available=available;
           }
           
+          
+          
+         public void borrowBook(){
+             available=false;
+         }
+         
+         
+         public void returnBook(){
+             available=true;
+         }
+                
+         
+
+          
           @Override
           public String toString(){
               return "ID "+id+"\nTitle "+title+"\nAuthor "+author+"\navailable "+available;
