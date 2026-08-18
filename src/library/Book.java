@@ -3,10 +3,11 @@ package library;
 
 public class Book {
  
-    private int id;
+     private int id;
      private String title;
      private String author;
-          private boolean available;
+     private boolean available;
+     private Member borrowedBy;
           
           
           public Book(int id,String title,String author ){
@@ -36,16 +37,20 @@ public class Book {
           this.available=available;
           }
           
+       public Member getBorrowedBy() {
+    return borrowedBy;
+}   
           
-          
-         public void borrowBook(){
-             available=false;
-         }
+       public void borrowBook(Member member) {
+    available = false;
+    borrowedBy = member;
+}
          
          
-         public void returnBook(){
-             available=true;
-         }
+        public void returnBook() {
+    available = true;
+    borrowedBy = null;
+}
                 
          
 
