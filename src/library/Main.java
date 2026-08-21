@@ -11,10 +11,19 @@ public class Main {
       Member m2 = new Member(2, " Norah");
       
        library.addMember(m1);
-       library.addMember(m2);       
-       library.addBook(new Book(1,"Clean code","Robert C.Martin"));
-       library.addBook(new Book(2,"Java Basics","John Smith"));
-       library.addBook(new Book(3,"Design Pattern","GoF"));
+       library.addMember(m2); 
+       
+       
+if(library.isEmpty()) {
+
+    Book book1 = new Book(1, "Clean Code", "Robert C. Martin");
+    Book book2 = new Book(2, "Java Basics", "John Smith");
+    Book book3 = new Book(3, "Design Pattern", "GoF");
+
+    library.addBook(book1);
+    library.addBook(book2);
+    library.addBook(book3);
+}
 
        int choice;
   do{
@@ -99,12 +108,12 @@ public class Main {
                 case 6:
                   
           System.out.println("Enter Book ID: ");
-          int borrowId= input.nextInt();
+          int bookId= input.nextInt();
           System.out.println("Enter Member ID: ");
           int memberId= input.nextInt();
 
                             
-          if(library.borrowBook(borrowId,memberId)){
+          if(library.borrowBook(memberId,bookId)){
           System.out.println("Book borrowed successfully");
           }else{
           System.out.println("Book is already Available or Book or member not found");
